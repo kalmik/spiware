@@ -1,5 +1,7 @@
 # Protocol 0.1
 
+It's is a implementation to a SPI "bridge slave mode" to ATMEGA328p.
+
 ## Protocol byte frame
 
 |MODE|VALUE   |PORT ADDR                   |PIN ADDR                   |
