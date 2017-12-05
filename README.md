@@ -45,9 +45,9 @@ It's is a implementation to a SPI "bridge slave mode" to ATMEGA328p.
      * SPI_B[2-0] = 111 --> 7 in binary
      */
 
-    // binary way
+    /* binary way */
     command = 0b11100111;
-    // hex way
+    /* hex way */
     command = 0xE7
     ```
 * Read PD7
@@ -60,9 +60,10 @@ It's is a implementation to a SPI "bridge slave mode" to ATMEGA328p.
      * SPI_B[5-3] = 110 --> PORTD
      * SPI_B[2-0] = 110 --> 7 in binary
      */
-    // binary way
+     
+    /* binary way */
     command = 0b00110110;
-    // hex way
+    /* hex way */
     command = 0x36;
     ```
 
@@ -71,9 +72,15 @@ It's is a implementation to a SPI "bridge slave mode" to ATMEGA328p.
  	To access the Analogic Digital Converter (ADC) the command should in READ MODE and set 1 in value bit (SPI_B6) and do not specify any PORT. so the command to read ADC should start with 01000_ _ _ the last 3 bits is the ADC number.
 
     ```c
-    // binary way
+    /* binary way */
     command = 0b01000001;
     // hex way
     command = 0x41;
+    
+    /*
+     * To make easier you can do.
+     */
+     #define ANALOG_CMD = 0x40
+     command = ANALOG_CMD | 0x01
     ```
 
