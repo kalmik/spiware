@@ -55,10 +55,11 @@ It's is a implementation to a SPI "bridge slave mode" to ATMEGA328p.
      * SPI_B[5-3] = 110 --> PORTD
      * SPI_B[2-0] = 110 --> 7 in binary
      */
-    // binary way
-    	command = 0b00110110;
-    // hex way
-    	command = 0x36;
+    
+    /* binary way */
+    command = 0b00110110;
+    /* hex way */
+    command = 0x36;
     ```
 
  * Read ADC 1
